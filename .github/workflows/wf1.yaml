@@ -1,6 +1,14 @@
 name: WF1
 
-on: workflow_dispatch
+on:
+  release:
+    types:
+      - prereleased
+  workflow_dispatch:
+    inputs:
+      message:
+        required: true
+        default: 'Hello, World!'
 
 jobs:
   first_job:
@@ -8,6 +16,8 @@ jobs:
     steps:
       - name: Step 1
         run: |
+          echo 'message'
+          echo '${{ inputs.message }}'
           echo 'github.event.workflow_run.head_branch'
           echo '${{ github.event.workflow_run.head_branch }}'
           echo 'github.action'

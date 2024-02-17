@@ -1,9 +1,6 @@
 name: WF2
 
 on:
-  release:
-    types:
-      - prereleased
   workflow_run:
     workflows:
       - WF1
@@ -21,6 +18,8 @@ jobs:
     steps:
       - name: Step 1
         run: |
+          echo 'message'
+          echo '${{ inputs.message }}'
           echo 'github.event.workflow_run.head_branch'
           echo '${{ github.event.workflow_run.head_branch }}'
           echo 'github.action'
