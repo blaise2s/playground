@@ -18,8 +18,6 @@ jobs:
           echo '${{ vars }}'
           echo '--- job  ---'
           echo '${{ job }}'
-          echo '--- jobs  ---'
-          echo '${{ jobs }}'
           echo '--- steps  ---'
           echo '${{ steps }}'
           echo '--- runner  ---'
