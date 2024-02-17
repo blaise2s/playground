@@ -23,6 +23,8 @@ jobs:
         run: |
           echo '--- message  ---'
           echo '${{ inputs.message }}'
+          echo '--- github.event.workflow_run.head_branch  ---'
+          echo '${{ github.event.workflow_run.head_branch }}'
           echo '--- github  ---'
           echo '${{ github }}'
           echo '--- env  ---'

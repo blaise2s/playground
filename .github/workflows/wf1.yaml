@@ -8,6 +8,8 @@ jobs:
     steps:
       - name: Step 1
         run: |
+          echo '--- github.event.workflow_run.head_branch  ---'
+          echo '${{ github.event.workflow_run.head_branch }}'
           echo '--- github  ---'
           echo '${{ github }}'
           echo '--- env  ---'
