@@ -1,0 +1,35 @@
+name: WF1
+
+on: workflow_dispatch
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step 1
+        run: |
+          echo '--- github  ---'
+          echo '${{ github }}'
+          echo '--- env  ---'
+          echo '${{ env }}'
+          echo '--- vars  ---'
+          echo '${{ vars }}'
+          echo '--- job  ---'
+          echo '${{ job }}'
+          echo '--- jobs  ---'
+          echo '${{ jobs }}'
+          echo '--- steps  ---'
+          echo '${{ steps }}'
+          echo '--- runner  ---'
+          echo '${{ runner }}'
+          echo '--- secrets  ---'
+          echo '${{ secrets }}'
+          echo '--- strategy  ---'
+          echo '${{ strategy }}'
+          echo '--- matrix  ---'
+          echo '${{ matrix }}'
+          echo '--- needs  ---'
+          echo '${{ needs }}'
+          echo '--- inputs  ---'
+          echo '${{ inputs }}'
+  
