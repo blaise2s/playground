@@ -16,37 +16,11 @@ on:
         default: 'Hello, World!'
 
 jobs:
-  job1:
+  first_job:
     runs-on: ubuntu-latest
     steps:
       - name: Step 1
         run: |
           echo '--- message  ---'
           echo '${{ inputs.message }}'
-          echo '--- github.event.workflow_run.head_branch  ---'
-          echo '${{ github.event.workflow_run.head_branch }}'
-          echo '--- github  ---'
-          echo '${{ github }}'
-          echo '--- env  ---'
-          echo '${{ env }}'
-          echo '--- vars  ---'
-          echo '${{ vars }}'
-          echo '--- job  ---'
-          echo '${{ job }}'
-          echo '--- jobs  ---'
-          echo '${{ jobs }}'
-          echo '--- steps  ---'
-          echo '${{ steps }}'
-          echo '--- runner  ---'
-          echo '${{ runner }}'
-          echo '--- secrets  ---'
-          echo '${{ secrets }}'
-          echo '--- strategy  ---'
-          echo '${{ strategy }}'
-          echo '--- matrix  ---'
-          echo '${{ matrix }}'
-          echo '--- needs  ---'
-          echo '${{ needs }}'
-          echo '--- inputs  ---'
-          echo '${{ inputs }}'
   
