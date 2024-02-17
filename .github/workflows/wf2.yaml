@@ -9,7 +9,11 @@ on:
       - WF1
     types:
       - completed
-  workflow_dispatch
+  workflow_dispatch:
+    inputs:
+      message:
+        required: true
+        default: 'Hello, World!'
 
 jobs:
   job1:
@@ -17,6 +21,8 @@ jobs:
     steps:
       - name: Step 1
         run: |
+          echo '--- message  ---'
+          echo '${{ inputs.message }}'
           echo '--- github  ---'
           echo '${{ github }}'
           echo '--- env  ---'
